@@ -1,0 +1,60 @@
+{
+    "units": "cm",
+    "height_cm": 175,
+    "weight_kg": 70,
+    "chest_cm": [98, 98],
+    "waist_cm": [82, 82],
+    "hip_cm": [96, 96],
+    "inseam_cm": [80, 80],
+    "torso_cm": [50, 50],
+    "fit_preference": "regular",
+    "gender": "men",
+    "shoe_us": 9,
+    "shoe_eu": 42,
+    "shoe_sizing": {
+        "women_us_offset": 1.5,
+        "women_eu_offset": 1.5,
+        "unisex_brands": [
+            "vivobarefoot",
+            "vivo barefoot",
+            "vivo"
+        ]
+    },
+    "known_good_sizes": {
+        "uniqlo": {
+            "tops": ["S", "M"],
+            "bottoms": ["M", "30", "31"]
+        },
+        "sierra": {
+            "tops": ["M"],
+            "bottoms": ["M", "30", "31"]
+        }
+    },
+    "sock_size_charts": {
+        "default_mens": {
+            "S": {"shoe_us": [3, 5.5]},
+            "M": {"shoe_us": [6, 8.5]},
+            "L": {"shoe_us": [9, 11.5]},
+            "XL": {"shoe_us": [12, 14.5]}
+        },
+        "smartwool": {
+            "S": {"shoe_us": [3, 5.5]},
+            "M": {"shoe_us": [6, 8.5]},
+            "L": {"shoe_us": [9, 11.5]},
+            "XL": {"shoe_us": [12, 14.5]}
+        },
+        "icebreaker": {
+            "S": {"shoe_us": [3, 5.5]},
+            "M": {"shoe_us": [6, 8.5]},
+            "L": {"shoe_us": [9, 11.5]},
+            "XL": {"shoe_us": [12, 14.5]}
+        },
+        "darn tough": {
+            "S": {"shoe_us": [3, 5.5]},
+            "M": {"shoe_us": [6, 8.5]},
+            "L": {"shoe_us": [9, 11.5]},
+            "XL": {"shoe_us": [12, 14.5]}
+        }
+    },
+    "notes": "Copy to fit_profile.json and edit with your measurements."
+}

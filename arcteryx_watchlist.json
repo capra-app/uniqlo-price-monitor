@@ -1,0 +1,14 @@
+[
+    {
+        "url": "https://outlet.arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530",
+        "color": "*",
+        "size": "30R",
+        "alert_on": ["restock"]
+    },
+    {
+        "url": "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530",
+        "color": "*",
+        "size": "30R",
+        "alert_on": ["outlet_price"]
+    }
+]

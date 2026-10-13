@@ -1,0 +1,2 @@
+patchright==1.52.5
+requests==2.32.3

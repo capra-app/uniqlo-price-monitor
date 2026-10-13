@@ -1,0 +1,50 @@
+{
+    "https://www.zara.com/co/es/pantalon-regular-fit-100-lana-p02381381.html?v1=571694692": {
+        "product_id": "571684681",
+        "variant_id": "571694692",
+        "name": "100% WOOL REGULAR FIT PANTS",
+        "color": "Anthracite Gray",
+        "price": 359000.0,
+        "list_price": null,
+        "currency": "COP",
+        "on_sale": false,
+        "in_stock": false,
+        "fit_sizes": [],
+        "wanted_sizes": [
+            "40"
+        ],
+        "url": "https://www.zara.com/co/es/pantalon-regular-fit-100-lana-p02381381.html?v1=571694692"
+    },
+    "https://www.zara.com/co/es/pantalon-regular-fit-100-lana-p02381381.html?v1=571694690": {
+        "product_id": "571684681",
+        "variant_id": "571694690",
+        "name": "100% WOOL REGULAR FIT PANTS",
+        "color": "Navy blue",
+        "price": 359000.0,
+        "list_price": null,
+        "currency": "COP",
+        "on_sale": false,
+        "in_stock": false,
+        "fit_sizes": [],
+        "wanted_sizes": [
+            "40"
+        ],
+        "url": "https://www.zara.com/co/es/pantalon-regular-fit-100-lana-p02381381.html?v1=571694690"
+    },
+    "https://www.zara.com/co/es/pantalon-regular-fit-100-lana-p02381381.html?v1=571694691": {
+        "product_id": "571684681",
+        "variant_id": "571694691",
+        "name": "100% WOOL REGULAR FIT PANTS",
+        "color": "Black",
+        "price": 359000.0,
+        "list_price": null,
+        "currency": "COP",
+        "on_sale": false,
+        "in_stock": false,
+        "fit_sizes": [],
+        "wanted_sizes": [
+            "40"
+        ],
+        "url": "https://www.zara.com/co/es/pantalon-regular-fit-100-lana-p02381381.html?v1=571694691"
+    }
+}

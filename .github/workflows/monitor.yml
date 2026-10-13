@@ -1,0 +1,195 @@
+name: Uniqlo Price Monitor
+
+on:
+  schedule:
+    # 16:00 Colombia (COT, UTC-5) → 21:00 UTC
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Log alerts without sending notifications or writing state
+        type: boolean
+        default: false
+
+concurrency:
+  group: uniqlo-price-monitor
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  run-monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Patchright browser
+        run: python -m patchright install --with-deps chromium
+
+      - name: Create fit profile
+        env:
+          FIT_PROFILE_JSON: ${{ secrets.FIT_PROFILE_JSON }}
+        run: |
+          if [ -n "$FIT_PROFILE_JSON" ]; then
+            printf '%s\n' "$FIT_PROFILE_JSON" > fit_profile.json
+          fi
+
+      - name: Run Tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Run Monitor
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+        run: python -u monitor.py
+
+      - name: Run Arc'teryx Monitor
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+        run: python -u arcteryx_monitor.py
+
+      - name: Run IKEA Monitor
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+        run: python -u ikea_monitor.py
+
+      - name: Run Zara Monitor
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+          ZARA_STORE_ID: "11735"
+        run: python -u zara_monitor.py
+
+      - name: Commit monitor state
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add last_seen_prices.json monitor_health.json arcteryx_state.json arcteryx_health.json arcteryx_merino_state.json ikea_state.json ikea_health.json zara_state.json zara_health.json
+          if git diff --staged --quiet; then
+            echo "No monitor state changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update monitor state [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            git push && exit 0
+            echo "Push failed (attempt ${attempt}), retrying..."
+            sleep $((attempt * 2))
+          done
+          echo "Failed to push monitor state after retries"
+          exit 1
+
+      - name: Notify on workflow failure
+        if: failure()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "No Discord webhook configured for failure alerts."
+            exit 0
+          fi
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          curl -sS -X POST "$DISCORD_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\":\"Uniqlo monitor workflow failed: ${RUN_URL}\",\"flags\":4}"
+
+  run-sierra:
+    # macOS runners have better residential-like IP reputation and real Chrome,
+    # which is much more likely to pass Sierra/Akamai challenges than ubuntu.
+    runs-on: macos-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Patchright browser
+        run: python -m patchright install chromium
+
+      - name: Create fit profile
+        env:
+          FIT_PROFILE_JSON: ${{ secrets.FIT_PROFILE_JSON }}
+        run: |
+          if [ -n "$FIT_PROFILE_JSON" ]; then
+            printf '%s\n' "$FIT_PROFILE_JSON" > fit_profile.json
+          fi
+
+      - name: Run Sierra Monitor
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && 'true' || 'false' }}
+          SIERRA_BROWSER_CHANNEL: chrome
+          SIERRA_BROWSER_HEADLESS: "false"
+          SIERRA_BROWSER_SELECTOR_TIMEOUT_MS: "180000"
+          SIERRA_BROWSER_DETAIL_TIMEOUT_MS: "60000"
+          SIERRA_BROWSER_FETCH_ATTEMPTS: "3"
+          SIERRA_RUN_BUDGET_SEC: "2400"
+        run: python -u sierra_monitor.py
+
+      - name: Commit Sierra state
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sierra_state.json sierra_health.json
+          if git diff --staged --quiet; then
+            echo "No Sierra state changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update Sierra monitor state [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            git push && exit 0
+            echo "Push failed (attempt ${attempt}), retrying..."
+            sleep $((attempt * 2))
+          done
+          echo "Failed to push Sierra state after retries"
+          exit 1
+
+      - name: Notify on Sierra failure
+        if: failure()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "No Discord webhook configured for failure alerts."
+            exit 0
+          fi
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          curl -sS -X POST "$DISCORD_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"content\":\"Sierra monitor failed: ${RUN_URL}\",\"flags\":4}"

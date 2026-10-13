@@ -1,0 +1,74 @@
+{
+    "https://outlet.arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530|VOID|30R": {
+        "price": 126.0,
+        "list_price": 180.0,
+        "stock_status": "OutOfStock",
+        "in_stock": false,
+        "on_outlet": true,
+        "variant_id": "X000009530142",
+        "name": "Kragg Cotton Pant",
+        "color_label": "Void",
+        "size_label": "30-R",
+        "url": "https://outlet.arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530"
+    },
+    "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530|HABITAT|30R": {
+        "price": 180.0,
+        "list_price": 180.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "on_outlet": false,
+        "variant_id": "X000009530220",
+        "name": "Kragg Cotton Pant",
+        "color_label": "Habitat",
+        "size_label": "30-R",
+        "url": "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530"
+    },
+    "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530|BLACK SAPPHIRE|30R": {
+        "price": 180.0,
+        "list_price": 180.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "on_outlet": false,
+        "variant_id": "X000009530039",
+        "name": "Kragg Cotton Pant",
+        "color_label": "Black Sapphire",
+        "size_label": "30-R",
+        "url": "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530"
+    },
+    "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530|BLACK|30R": {
+        "price": 180.0,
+        "list_price": 180.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "on_outlet": false,
+        "variant_id": "X000009530013",
+        "name": "Kragg Cotton Pant",
+        "color_label": "Black",
+        "size_label": "30-R",
+        "url": "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530"
+    },
+    "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530|CLOUD|30R": {
+        "price": 180.0,
+        "list_price": 180.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "on_outlet": false,
+        "variant_id": "X000009530243",
+        "name": "Kragg Cotton Pant",
+        "color_label": "Cloud",
+        "size_label": "30-R",
+        "url": "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530"
+    },
+    "https://outlet.arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530|TATSU|30R": {
+        "price": 126.0,
+        "list_price": 180.0,
+        "stock_status": "OutOfStock",
+        "in_stock": false,
+        "on_outlet": true,
+        "variant_id": "X000009530169",
+        "name": "Kragg Cotton Pant",
+        "color_label": "Tatsu",
+        "size_label": "30-R",
+        "url": "https://outlet.arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530"
+    }
+}
