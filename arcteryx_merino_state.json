@@ -240,5 +240,71 @@
         "color_label": "Lt Gnosis",
         "size_label": "M",
         "url": "https://outlet.arcteryx.com/us/en/shop/mens/frame-shirt-ss"
+    },
+    "https://outlet.arcteryx.com/us/en/shop/mens/frame-polo-shirt-ls|M|PASSPORT": {
+        "price": 175.0,
+        "list_price": 250.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "variant_id": "X000007226062",
+        "name": "Frame Polo Shirt LS",
+        "color_label": "Passport",
+        "size_label": "M",
+        "url": "https://outlet.arcteryx.com/us/en/shop/mens/frame-polo-shirt-ls"
+    },
+    "https://outlet.arcteryx.com/us/en/shop/mens/frame-polo-shirt-ls|S|PASSPORT": {
+        "price": 175.0,
+        "list_price": 250.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "variant_id": "X000007226061",
+        "name": "Frame Polo Shirt LS",
+        "color_label": "Passport",
+        "size_label": "S",
+        "url": "https://outlet.arcteryx.com/us/en/shop/mens/frame-polo-shirt-ls"
+    },
+    "https://outlet.arcteryx.com/us/en/shop/mens/ionia-merino-wool-shirt-ss|M|SOLITUDE HEATHER": {
+        "price": 63.0,
+        "list_price": 90.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "variant_id": "X000006816081",
+        "name": "Ionia Merino Wool Shirt SS",
+        "color_label": "Solitude Heather",
+        "size_label": "M",
+        "url": "https://outlet.arcteryx.com/us/en/shop/mens/ionia-merino-wool-shirt-ss"
+    },
+    "https://outlet.arcteryx.com/us/en/shop/mens/ionia-merino-wool-shirt-ss|M|MANTIS": {
+        "price": 63.0,
+        "list_price": 90.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "variant_id": "X000006816105",
+        "name": "Ionia Merino Wool Shirt SS",
+        "color_label": "Mantis",
+        "size_label": "M",
+        "url": "https://outlet.arcteryx.com/us/en/shop/mens/ionia-merino-wool-shirt-ss"
+    },
+    "https://outlet.arcteryx.com/us/en/shop/mens/ionia-merino-wool-shirt-ss|S|MANTIS": {
+        "price": 63.0,
+        "list_price": 90.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "variant_id": "X000006816104",
+        "name": "Ionia Merino Wool Shirt SS",
+        "color_label": "Mantis",
+        "size_label": "S",
+        "url": "https://outlet.arcteryx.com/us/en/shop/mens/ionia-merino-wool-shirt-ss"
+    },
+    "https://outlet.arcteryx.com/us/en/shop/mens/ionia-merino-wool-shirt-ss|S|SOLITUDE HEATHER": {
+        "price": 63.0,
+        "list_price": 90.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "variant_id": "X000006816080",
+        "name": "Ionia Merino Wool Shirt SS",
+        "color_label": "Solitude Heather",
+        "size_label": "S",
+        "url": "https://outlet.arcteryx.com/us/en/shop/mens/ionia-merino-wool-shirt-ss"
     }
 }
