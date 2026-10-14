@@ -24,8 +24,10 @@
         "list_price": null,
         "currency": "COP",
         "on_sale": false,
-        "in_stock": false,
-        "fit_sizes": [],
+        "in_stock": true,
+        "fit_sizes": [
+            "40"
+        ],
         "wanted_sizes": [
             "40"
         ],
