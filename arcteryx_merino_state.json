@@ -11,7 +11,7 @@
         "url": "https://outlet.arcteryx.com/us/en/shop/mens/frame-polo-shirt-ls"
     },
     "https://outlet.arcteryx.com/us/en/shop/mens/frame-polo-shirt-ls|S|GNOSIS HEATHER": {
-        "price": 122.5,
+        "price": 175.0,
         "list_price": 250.0,
         "stock_status": "LowStock",
         "in_stock": true,
@@ -44,9 +44,9 @@
         "url": "https://outlet.arcteryx.com/us/en/shop/mens/frame-shirt-ls"
     },
     "https://outlet.arcteryx.com/us/en/shop/mens/frame-shirt-ls|S|PASSPORT": {
-        "price": 98.0,
+        "price": 140.0,
         "list_price": 200.0,
-        "stock_status": "LowStock",
+        "stock_status": "InStock",
         "in_stock": true,
         "variant_id": "X000007258062",
         "name": "Frame Shirt LS",
@@ -299,7 +299,7 @@
     "https://outlet.arcteryx.com/us/en/shop/mens/ionia-merino-wool-shirt-ss|S|SOLITUDE HEATHER": {
         "price": 63.0,
         "list_price": 90.0,
-        "stock_status": "LowStock",
+        "stock_status": "InStock",
         "in_stock": true,
         "variant_id": "X000006816080",
         "name": "Ionia Merino Wool Shirt SS",
