@@ -255,7 +255,7 @@
     "https://outlet.arcteryx.com/us/en/shop/mens/frame-polo-shirt-ls|S|PASSPORT": {
         "price": 175.0,
         "list_price": 250.0,
-        "stock_status": "InStock",
+        "stock_status": "LowStock",
         "in_stock": true,
         "variant_id": "X000007226061",
         "name": "Frame Polo Shirt LS",
