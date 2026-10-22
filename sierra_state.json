@@ -155,19 +155,6 @@
         "name": "SmartWool SmartLoft Hoodie",
         "url": "https://www.sierra.com/smartwool-smartloft-hoodie-merino-wool-insulated-zip-neck~p~9tvhn/"
     },
-    "149c0": {
-        "price": 179.99,
-        "compare_at": 280.0,
-        "merino_pct": 0.0,
-        "shoe_material_pct": 0.0,
-        "down_fill_pct": 90.0,
-        "fill_power": 800,
-        "fit_sizes": [
-            "M"
-        ],
-        "name": "Mountain Hardwear Ghost Whisperer Down Hooded Jacket",
-        "url": "https://www.sierra.com/mountain-hardwear-ghost-whisperer-down-hooded-jacket-800-fill-power~p~149c0/"
-    },
     "9pytw": {
         "price": 49.99,
         "compare_at": 75.0,
@@ -219,5 +206,18 @@
         ],
         "name": "Icebreaker 175 Everyday Base Layer Leggings",
         "url": "https://www.sierra.com/icebreaker-175-everyday-base-layer-leggings-merino-wool~p~9pyuf/"
+    },
+    "17vh2": {
+        "price": 39.99,
+        "compare_at": 70.0,
+        "merino_pct": 100.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 0.0,
+        "fill_power": 0,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "Sherpa Adventure Gear Kangtega Crew Sweater",
+        "url": "https://www.sierra.com/sherpa-adventure-gear-kangtega-crew-sweater-merino-wool~p~17vh2/"
     }
 }
