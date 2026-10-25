@@ -1619,7 +1619,7 @@
     },
     "E486818-000_09_S": {
         "price": 79.9,
-        "on_sale": false
+        "on_sale": true
     },
     "E488605-000_01_S": {
         "price": 19.9,
@@ -2094,9 +2094,6 @@
         "seen": true
     },
     "__product__E491365-000": {
-        "seen": true
-    },
-    "__product__E455486-000": {
         "seen": true
     }
 }
