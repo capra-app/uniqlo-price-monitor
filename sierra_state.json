@@ -167,5 +167,44 @@
         ],
         "name": "Sherpa Adventure Gear Kangtega Crew Sweater",
         "url": "https://www.sierra.com/sherpa-adventure-gear-kangtega-crew-sweater-merino-wool~p~17vh2/"
+    },
+    "9txch": {
+        "price": 49.99,
+        "compare_at": 95.0,
+        "merino_pct": 100.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 0.0,
+        "fill_power": 0,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "SmartWool Classic Thermal Base Layer Shirt",
+        "url": "https://www.sierra.com/smartwool-classic-thermal-base-layer-shirt-merino-wool-zip-neck-long-sleeve~p~9txch/"
+    },
+    "9rakt": {
+        "price": 59.99,
+        "compare_at": 125.0,
+        "merino_pct": 98.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 0.0,
+        "fill_power": 0,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "Icebreaker Shifter II Joggers",
+        "url": "https://www.sierra.com/icebreaker-shifter-ii-joggers-merino-wool~p~9rakt/"
+    },
+    "149c6": {
+        "price": 149.99,
+        "compare_at": 260.0,
+        "merino_pct": 0.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 90.0,
+        "fill_power": 800,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "Mountain Hardwear Ghost Whisperer Down Jacket",
+        "url": "https://www.sierra.com/mountain-hardwear-ghost-whisperer-down-jacket-800-fill-power~p~149c6/"
     }
 }
