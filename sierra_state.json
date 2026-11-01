@@ -206,5 +206,44 @@
         ],
         "name": "Mountain Hardwear Ghost Whisperer Down Jacket",
         "url": "https://www.sierra.com/mountain-hardwear-ghost-whisperer-down-jacket-800-fill-power~p~149c6/"
+    },
+    "18fk9": {
+        "price": 59.99,
+        "compare_at": 120.0,
+        "merino_pct": 98.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 0.0,
+        "fill_power": 0,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "Icebreaker Shifter II Joggers",
+        "url": "https://www.sierra.com/icebreaker-shifter-ii-joggers-merino-wool~p~18fk9/"
+    },
+    "18f84": {
+        "price": 99.99,
+        "compare_at": 200.0,
+        "merino_pct": 100.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 0.0,
+        "fill_power": 0,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "Icebreaker 260 Quantum Hooded Jacket",
+        "url": "https://www.sierra.com/icebreaker-260-quantum-hooded-jacket-merino-wool-full-zip~p~18f84/"
+    },
+    "18f81": {
+        "price": 99.99,
+        "compare_at": 210.0,
+        "merino_pct": 100.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 0.0,
+        "fill_power": 0,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "Icebreaker 260 Quantum Hooded Jacket",
+        "url": "https://www.sierra.com/icebreaker-260-quantum-hooded-jacket-merino-wool-full-zip~p~18f81/"
     }
 }
