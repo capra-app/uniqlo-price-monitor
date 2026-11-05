@@ -258,5 +258,31 @@
         ],
         "name": "Icebreaker 150 Ace T-Shirt",
         "url": "https://www.sierra.com/icebreaker-150-ace-t-shirt-merino-wool-long-sleeve~p~18dj8/"
+    },
+    "18f5w": {
+        "price": 149.99,
+        "compare_at": 280.0,
+        "merino_pct": 67.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 0.0,
+        "fill_power": 0,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "Icebreaker Twill Shirt Jacket",
+        "url": "https://www.sierra.com/icebreaker-twill-shirt-jacket-merino-wool~p~18f5w/"
+    },
+    "18d89": {
+        "price": 24.99,
+        "compare_at": 50.0,
+        "merino_pct": 100.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 0.0,
+        "fill_power": 0,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "Icebreaker 175 Everyday Boxers with Fly",
+        "url": "https://www.sierra.com/icebreaker-175-everyday-boxers-with-fly-merino-wool~p~18d89/"
     }
 }
