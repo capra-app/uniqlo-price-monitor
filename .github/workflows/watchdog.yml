@@ -1,0 +1,41 @@
+name: Monitor Watchdog
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  check-recent-success:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Alert if the monitor has not succeeded recently
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          MAX_AGE_HOURS: "72"
+        run: |
+          last=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "Uniqlo Price Monitor" \
+            --status success --limit 1 --json updatedAt --jq '.[0].updatedAt // empty')
+          now=$(date +%s)
+          if [ -n "$last" ]; then
+            age_hours=$(( (now - $(date -d "$last" +%s)) / 3600 ))
+          else
+            age_hours=99999
+          fi
+          echo "Hours since last successful monitor run: $age_hours"
+          if [ "$age_hours" -le "$MAX_AGE_HOURS" ]; then
+            exit 0
+          fi
+          msg="Uniqlo monitor has had no successful run in ${age_hours}h: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions"
+          if [ -n "$DISCORD_WEBHOOK_URL" ]; then
+            curl -sS -X POST "$DISCORD_WEBHOOK_URL" -H "Content-Type: application/json" \
+              -d "{\"content\":\"${msg}\",\"flags\":4}"
+          fi
+          echo "$msg"
+          exit 1

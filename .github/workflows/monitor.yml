@@ -33,7 +33,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.12'
+          cache: pip
 
       - name: Install Dependencies
         run: pip install -r requirements.txt
@@ -53,6 +54,7 @@ jobs:
         run: python -m unittest discover -s tests -v
 
       - name: Run Monitor
+        if: ${{ !cancelled() }}
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -61,6 +63,7 @@ jobs:
         run: python -u monitor.py
 
       - name: Run Arc'teryx Monitor
+        if: ${{ !cancelled() }}
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -69,6 +72,7 @@ jobs:
         run: python -u arcteryx_monitor.py
 
       - name: Run IKEA Monitor
+        if: ${{ !cancelled() }}
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -77,6 +81,7 @@ jobs:
         run: python -u ikea_monitor.py
 
       - name: Run Zara Monitor
+        if: ${{ !cancelled() }}
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -86,7 +91,7 @@ jobs:
         run: python -u zara_monitor.py
 
       - name: Commit monitor state
-        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        if: ${{ !cancelled() && (github.event_name != 'workflow_dispatch' || !inputs.dry_run) }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -131,7 +136,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.12'
+          cache: pip
 
       - name: Install Dependencies
         run: pip install -r requirements.txt

@@ -1047,10 +1047,10 @@ def main():
 
     if browser_fetch_enabled():
         with BrowserFetcher() as fetcher:
-            _, detailed_products = collect_products(fetcher, category_urls, health)
+            listing_items, detailed_products = collect_products(fetcher, category_urls, health)
     else:
         session = make_session()
-        _, detailed_products = collect_products(session, category_urls, health)
+        listing_items, detailed_products = collect_products(session, category_urls, health)
 
     if not detailed_products:
         # Akamai often hard-blocks GitHub Actions IPs. Health/discord already
@@ -1096,7 +1096,15 @@ def main():
             "url": product["url"],
         }
 
-    stale_ids = [key for key in state if key not in active_ids]
+    # Products listed but whose detail fetch failed are unknown, not gone:
+    # keep their state so they don't re-alert as "new" next run.
+    detailed_ids = {product["product_id"] for product in detailed_products}
+    unfetched_ids = {
+        item["product_id"] for item in listing_items if item["product_id"] not in detailed_ids
+    }
+    stale_ids = [
+        key for key in state if key not in active_ids and key not in unfetched_ids
+    ]
     for key in stale_ids:
         del state[key]
     if stale_ids:

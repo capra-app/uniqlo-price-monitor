@@ -324,7 +324,8 @@ def fetch_storefront_color(session, store_id, product_id):
             session, storefront_availability_url(store_id, product_id)
         )
         stock = availability_by_sku(availability)
-    except Exception:
+    except Exception as exc:
+        print(f"  Zara availability lookup failed for {product_id}: {exc}", flush=True)
         stock = None
     return scc, storefront_color_from_component(scc, stock)
 

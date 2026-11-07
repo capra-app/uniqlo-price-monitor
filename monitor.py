@@ -855,6 +855,10 @@ def main():
                 _, detail, stock_map = future.result()
             except Exception as exc:
                 print(f"  Error fetching {product_id}: {exc}", flush=True)
+                # Still listed, just not fetched: keep its state so it doesn't
+                # get pruned and re-alert as a new product next run.
+                if product_id:
+                    active_product_ids.add(product_id)
                 continue
             fetched_products.append((item, line_label, from_uc, detail, stock_map))
 
