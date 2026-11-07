@@ -1,4 +1,6 @@
+import json
 import os
+import tempfile
 import unittest
 from unittest.mock import patch
 
@@ -149,6 +151,28 @@ class MonitorLogicTests(unittest.TestCase):
                     False, "57% Acrylic, 28% Rayon, 9% Cashmere, 6% Spandex"
                 )
             )
+
+
+class JsonFileTests(unittest.TestCase):
+    def test_missing_file_returns_default(self):
+        with tempfile.TemporaryDirectory() as d:
+            self.assertEqual(monitor.load_json_file(os.path.join(d, "x.json"), {"a": 1}), {"a": 1})
+
+    def test_corrupt_file_raises_instead_of_resetting(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "x.json")
+            with open(path, "w") as f:
+                f.write('{"truncated": ')
+            with self.assertRaises(RuntimeError):
+                monitor.load_json_file(path, {})
+
+    def test_save_is_atomic_and_roundtrips(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "x.json")
+            with patch.object(monitor, "DRY_RUN", False):
+                monitor.save_json_file(path, {"k": [1, 2]})
+            self.assertEqual(json.load(open(path)), {"k": [1, 2]})
+            self.assertEqual(os.listdir(d), ["x.json"])
 
 
 if __name__ == "__main__":

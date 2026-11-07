@@ -125,16 +125,23 @@ def load_json_file(path, default):
     with open(path, "r", encoding="utf-8") as handle:
         try:
             return json.load(handle)
-        except json.JSONDecodeError:
-            return default
+        except json.JSONDecodeError as exc:
+            # Falling back to the default would look like "everything is new"
+            # and re-alert on every item, so fail loudly instead.
+            raise RuntimeError(f"{path} is corrupt and was not loaded: {exc}") from exc
 
 
 def save_json_file(path, data):
     if DRY_RUN:
         print(f"Dry run: would write {path}", flush=True)
         return
-    with open(path, "w", encoding="utf-8") as handle:
+    # Write to a temp file then rename so a crash can't leave a truncated file.
+    tmp_path = f"{path}.tmp"
+    with open(tmp_path, "w", encoding="utf-8") as handle:
         json.dump(data, handle, indent=4)
+        handle.flush()
+        os.fsync(handle.fileno())
+    os.replace(tmp_path, path)
 
 
 def load_state():
