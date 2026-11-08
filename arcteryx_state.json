@@ -70,5 +70,17 @@
         "color_label": "Tatsu",
         "size_label": "30-R",
         "url": "https://outlet.arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530"
+    },
+    "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530|DARK JADE|30R": {
+        "price": 180.0,
+        "list_price": 180.0,
+        "stock_status": "InStock",
+        "in_stock": true,
+        "on_outlet": false,
+        "variant_id": "X000009530249",
+        "name": "Kragg Cotton Pant",
+        "color_label": "Dark Jade",
+        "size_label": "30-R",
+        "url": "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530"
     }
 }
