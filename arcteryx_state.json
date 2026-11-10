@@ -14,7 +14,7 @@
     "https://arcteryx.com/us/en/shop/mens/kragg-cotton-pant-9530|HABITAT|30R": {
         "price": 180.0,
         "list_price": 180.0,
-        "stock_status": "InStock",
+        "stock_status": "LowStock",
         "in_stock": true,
         "on_outlet": false,
         "variant_id": "X000009530220",
