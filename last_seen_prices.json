@@ -908,7 +908,7 @@
     },
     "E486614-000_09_M": {
         "price": 29.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E486614-000_33_S": {
         "price": 39.9,
@@ -1193,9 +1193,6 @@
     "__product__E487328-000": {
         "seen": true
     },
-    "__product__E486082-000": {
-        "seen": true
-    },
     "__product__E486816-000": {
         "seen": true
     },
@@ -1294,30 +1291,6 @@
         "price": 24.9,
         "on_sale": false
     },
-    "E486082-000_09_S": {
-        "price": 29.9,
-        "on_sale": false
-    },
-    "E486082-000_09_M": {
-        "price": 39.9,
-        "on_sale": false
-    },
-    "E486082-000_36_S": {
-        "price": 19.9,
-        "on_sale": true
-    },
-    "E486082-000_36_M": {
-        "price": 29.9,
-        "on_sale": false
-    },
-    "E486082-000_39_S": {
-        "price": 29.9,
-        "on_sale": false
-    },
-    "E486082-000_39_M": {
-        "price": 39.9,
-        "on_sale": false
-    },
     "E486816-000_09_S": {
         "price": 39.9,
         "on_sale": true
@@ -1348,7 +1321,7 @@
     },
     "E486817-000_09_M": {
         "price": 49.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E486817-000_32_S": {
         "price": 69.9,
@@ -1392,7 +1365,7 @@
     },
     "E487270-000_09_S": {
         "price": 39.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E487270-000_09_M": {
         "price": 49.9,
@@ -1404,7 +1377,7 @@
     },
     "E487270-000_34_M": {
         "price": 39.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E487270-000_38_S": {
         "price": 39.9,
@@ -1468,7 +1441,7 @@
     },
     "E486610-000_09_S": {
         "price": 29.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E486610-000_09_M": {
         "price": 39.9,
@@ -1989,13 +1962,6 @@
         "on_sale": false
     },
     "__product__E490573-000": {
-        "seen": true
-    },
-    "E487214-000_07_31": {
-        "price": 39.9,
-        "on_sale": true
-    },
-    "__product__E487214-000": {
         "seen": true
     },
     "E471809-000_34_M": {
