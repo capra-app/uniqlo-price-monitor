@@ -38,32 +38,6 @@
         "name": "Icebreaker 175 Everyday Base Layer Top",
         "url": "https://www.sierra.com/icebreaker-175-everyday-base-layer-top-merino-wool-zip-neck-long-sleeve~p~9pyua/"
     },
-    "9pytx": {
-        "price": 49.99,
-        "compare_at": 85.0,
-        "merino_pct": 100.0,
-        "shoe_material_pct": 0.0,
-        "down_fill_pct": 0.0,
-        "fill_power": 0,
-        "fit_sizes": [
-            "M"
-        ],
-        "name": "Icebreaker 175 Everyday Base Layer Top",
-        "url": "https://www.sierra.com/icebreaker-175-everyday-base-layer-top-merino-wool-long-sleeve~p~9pytx/"
-    },
-    "9txcc": {
-        "price": 49.99,
-        "compare_at": 90.0,
-        "merino_pct": 100.0,
-        "shoe_material_pct": 0.0,
-        "down_fill_pct": 0.0,
-        "fill_power": 0,
-        "fit_sizes": [
-            "M"
-        ],
-        "name": "SmartWool Classic Thermal Base Layer Top",
-        "url": "https://www.sierra.com/smartwool-classic-thermal-base-layer-top-merino-wool-crew-neck-long-sleeve~p~9txcc/"
-    },
     "9txvx": {
         "price": 49.99,
         "compare_at": 95.0,
@@ -89,19 +63,6 @@
         ],
         "name": "SmartWool SmartLoft Hoodie",
         "url": "https://www.sierra.com/smartwool-smartloft-hoodie-merino-wool-insulated-zip-neck~p~9tykr/"
-    },
-    "9tvhn": {
-        "price": 69.99,
-        "compare_at": 150.0,
-        "merino_pct": 56.0,
-        "shoe_material_pct": 0.0,
-        "down_fill_pct": 0.0,
-        "fill_power": 0,
-        "fit_sizes": [
-            "M"
-        ],
-        "name": "SmartWool SmartLoft Hoodie",
-        "url": "https://www.sierra.com/smartwool-smartloft-hoodie-merino-wool-insulated-zip-neck~p~9tvhn/"
     },
     "9pytt": {
         "price": 39.99,
@@ -206,18 +167,5 @@
         ],
         "name": "Icebreaker 260 Quantum IV Hoodie",
         "url": "https://www.sierra.com/icebreaker-260-quantum-iv-hoodie-merino-wool-full-zip~p~18f86/"
-    },
-    "17n9f": {
-        "price": 39.99,
-        "compare_at": 80.0,
-        "merino_pct": 88.0,
-        "shoe_material_pct": 0.0,
-        "down_fill_pct": 0.0,
-        "fill_power": 0,
-        "fit_sizes": [
-            "M"
-        ],
-        "name": "SmartWool Merino Wool T-Shirt",
-        "url": "https://www.sierra.com/smartwool-merino-wool-t-shirt-short-sleeve~p~17n9f/"
     }
 }
