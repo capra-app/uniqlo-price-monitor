@@ -807,12 +807,6 @@
     "__product__E450536-000": {
         "seen": true
     },
-    "__product__E487218-000": {
-        "seen": true
-    },
-    "__product__E491784-000": {
-        "seen": true
-    },
     "E471808-000_78_S": {
         "price": 49.9,
         "on_sale": false
@@ -889,7 +883,7 @@
     },
     "E450536-000_39_M": {
         "price": 39.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E450536-000_55_S": {
         "price": 49.9,
@@ -1038,7 +1032,7 @@
     },
     "E460939-000_05_S": {
         "price": 39.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E460939-000_05_M": {
         "price": 39.9,
@@ -1323,7 +1317,7 @@
     },
     "E486817-000_32_M": {
         "price": 49.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E486818-000_07_M": {
         "price": 79.9,
@@ -1343,7 +1337,7 @@
     },
     "E487270-000_34_S": {
         "price": 39.9,
-        "on_sale": false
+        "on_sale": true
     },
     "E487270-000_34_M": {
         "price": 39.9,
@@ -1690,7 +1684,7 @@
     },
     "E487487-000_39_M": {
         "price": 29.9,
-        "on_sale": false
+        "on_sale": true
     },
     "E487487-000_79_S": {
         "price": 29.9,
@@ -1828,7 +1822,7 @@
     },
     "E486087-000_31_S": {
         "price": 29.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E486087-000_31_M": {
         "price": 29.9,
@@ -1930,9 +1924,6 @@
         "price": 59.9,
         "on_sale": false
     },
-    "__product__E488605-000": {
-        "seen": true
-    },
     "__product__E478550-000": {
         "seen": true
     },
@@ -1940,6 +1931,23 @@
         "seen": true
     },
     "__product__E453754-000": {
+        "seen": true
+    },
+    "__product__E488599-000": {
+        "seen": true
+    },
+    "E471808-000_50_S": {
+        "price": 49.9,
+        "on_sale": false
+    },
+    "E471808-000_50_M": {
+        "price": 49.9,
+        "on_sale": false
+    },
+    "__product__E491784-001": {
+        "seen": true
+    },
+    "__product__E487218-001": {
         "seen": true
     }
 }
