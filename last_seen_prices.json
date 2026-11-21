@@ -862,8 +862,8 @@
         "on_sale": false
     },
     "E450536-000_03_S": {
-        "price": 49.9,
-        "on_sale": false
+        "price": 39.9,
+        "on_sale": true
     },
     "E450536-000_03_M": {
         "price": 39.9,
@@ -950,7 +950,7 @@
     },
     "E488793-000_19_M": {
         "price": 29.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E488793-000_36_S": {
         "price": 39.9,
@@ -1293,7 +1293,7 @@
     },
     "E488773-000_09_M": {
         "price": 59.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E488773-000_33_S": {
         "price": 129.9,
@@ -1305,7 +1305,7 @@
     },
     "E486817-000_09_S": {
         "price": 49.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E486817-000_09_M": {
         "price": 49.9,
@@ -1317,7 +1317,7 @@
     },
     "E486817-000_32_M": {
         "price": 49.9,
-        "on_sale": false
+        "on_sale": true
     },
     "E486818-000_07_M": {
         "price": 79.9,
@@ -1325,7 +1325,7 @@
     },
     "E486818-000_09_M": {
         "price": 79.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E487270-000_09_S": {
         "price": 39.9,
@@ -1420,7 +1420,7 @@
     },
     "E486818-000_07_S": {
         "price": 79.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E486818-000_09_S": {
         "price": 79.9,
@@ -1612,7 +1612,7 @@
     },
     "E487488-000_69_M": {
         "price": 29.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E489492-000_19_S": {
         "price": 69.9,
@@ -1688,7 +1688,7 @@
     },
     "E487487-000_79_S": {
         "price": 29.9,
-        "on_sale": false
+        "on_sale": true
     },
     "E487487-000_79_M": {
         "price": 29.9,
@@ -1814,7 +1814,7 @@
     },
     "E486087-000_09_S": {
         "price": 29.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E486087-000_09_M": {
         "price": 29.9,
@@ -1826,7 +1826,7 @@
     },
     "E486087-000_31_M": {
         "price": 29.9,
-        "on_sale": true
+        "on_sale": false
     },
     "E486086-000_04_S": {
         "price": 29.9,
@@ -1989,6 +1989,40 @@
     },
     "E471809-000_50_M": {
         "price": 49.9,
+        "on_sale": false
+    },
+    "__product__E488599-000": {
+        "seen": true
+    },
+    "E486082-000_36_M": {
+        "price": 19.9,
+        "on_sale": true
+    },
+    "__product__E486082-000": {
+        "seen": true
+    },
+    "E465193-000_06_S": {
+        "price": 29.9,
+        "on_sale": false
+    },
+    "E465193-000_06_M": {
+        "price": 29.9,
+        "on_sale": false
+    },
+    "E465193-000_12_S": {
+        "price": 29.9,
+        "on_sale": false
+    },
+    "E465193-000_12_M": {
+        "price": 29.9,
+        "on_sale": false
+    },
+    "E465193-000_58_S": {
+        "price": 29.9,
+        "on_sale": false
+    },
+    "E465193-000_58_M": {
+        "price": 29.9,
         "on_sale": false
     }
 }
