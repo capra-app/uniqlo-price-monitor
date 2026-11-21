@@ -180,5 +180,31 @@
         ],
         "name": "SmartWool Merino Wool T-Shirt",
         "url": "https://www.sierra.com/smartwool-merino-wool-t-shirt-short-sleeve~p~17n9f/"
+    },
+    "1ax8m": {
+        "price": 69.99,
+        "compare_at": 140.0,
+        "merino_pct": 100.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 0.0,
+        "fill_power": 0,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "Royal Robbins Rockcraft Sweater",
+        "url": "https://www.sierra.com/royal-robbins-rockcraft-sweater-merino-wool~p~1ax8m/"
+    },
+    "1ax8g": {
+        "price": 69.99,
+        "compare_at": 140.0,
+        "merino_pct": 100.0,
+        "shoe_material_pct": 0.0,
+        "down_fill_pct": 0.0,
+        "fill_power": 0,
+        "fit_sizes": [
+            "M"
+        ],
+        "name": "Royal Robbins Rockcraft Sweater",
+        "url": "https://www.sierra.com/royal-robbins-rockcraft-sweater-merino-wool~p~1ax8g/"
     }
 }
